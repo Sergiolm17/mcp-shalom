@@ -14,7 +14,7 @@ import { z } from "zod";
 // Crear un servidor MCP
 const server = new McpServer({
   name: "ShalomAPI",
-  version: "1.0.0",
+  version: "1.0.2",
 });
 
 // 1. Lista de Agencias

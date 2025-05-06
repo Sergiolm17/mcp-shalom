@@ -1,9 +1,9 @@
 {
   "name": "mcp-shalom",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "bin": {
-    "shalom-api": "./build/index.js"
+    "mcp-shalom": "./build/index.js"
   },
   "scripts": {
     "build": "tsc",
