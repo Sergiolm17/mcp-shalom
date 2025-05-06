@@ -93,7 +93,7 @@ export async function buscarAgencias({
       );
     }
 
-    // Preparar información de filtros
+    // Registrar en consola para depuración
     if (departamento || provincia || distrito) {
       let filtroCombinado = [];
       if (departamento) filtroCombinado.push(`Departamento: ${departamento}`);

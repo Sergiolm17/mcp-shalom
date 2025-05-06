@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 
@@ -14,7 +13,7 @@ import { z } from "zod";
 // Crear un servidor MCP
 const server = new McpServer({
   name: "ShalomAPI",
-  version: "1.0.2",
+  version: "1.0.3",
 });
 
 // 1. Lista de Agencias

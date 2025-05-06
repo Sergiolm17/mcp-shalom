@@ -24,6 +24,7 @@ npm install mcp-shalom
 ```
 
 Requisitos:
+
 - Node.js >= 16.0.0
 
 ## Uso
@@ -80,12 +81,14 @@ Obtiene el enlace a la guía de remisión del transportista a partir del número
 Busca agencias filtrando por provincia y/o departamento.
 
 **Parámetros:**
+
 - `departamento` (opcional): Nombre del departamento (ej. "AMAZONAS")
 - `provincia` (opcional): Nombre de la provincia (ej. "CHACHAPOYAS", "LIMA")
 - `distrito` (opcional): Nombre del distrito (ej. "TAMBO")
 - `datosSolicitados`: Array con tipos de datos requeridos ("lat-long", "horario", "estado-de-agencia")
 
 **Ejemplo:**
+
 ```javascript
 {
   "departamento": "LIMA",
@@ -99,10 +102,12 @@ Busca agencias filtrando por provincia y/o departamento.
 Obtiene las tarifas de envío entre una agencia de origen y una agencia de destino.
 
 **Parámetros:**
+
 - `origen`: TER ID de la agencia de origen (ej. 356)
 - `destino`: TER ID de la agencia de destino (ej. 48)
 
 **Ejemplo:**
+
 ```javascript
 {
   "origen": 356,
@@ -115,9 +120,11 @@ Obtiene las tarifas de envío entre una agencia de origen y una agencia de desti
 Rastrea el estado de un envío utilizando el número de orden de servicio.
 
 **Parámetros:**
+
 - `ose_id`: Número de orden de servicio a rastrear (ej. "49229631")
 
 **Ejemplo:**
+
 ```javascript
 {
   "ose_id": "49229631"
@@ -129,10 +136,12 @@ Rastrea el estado de un envío utilizando el número de orden de servicio.
 Busca información detallada de un envío mediante su número y código.
 
 **Parámetros:**
+
 - `numero`: Número de la guía o orden (ej. "45751322")
 - `codigo`: Código alfanumérico de la guía (ej. "M7P7")
 
 **Ejemplo:**
+
 ```javascript
 {
   "numero": "45751322",
@@ -145,10 +154,12 @@ Busca información detallada de un envío mediante su número y código.
 Obtiene el enlace a la guía de remisión del transportista.
 
 **Parámetros:**
+
 - `numero`: Número de la guía o orden (ej. "45751322")
 - `codigo`: Código alfanumérico de la guía (ej. "M7P7")
 
 **Ejemplo:**
+
 ```javascript
 {
   "numero": "45751322",

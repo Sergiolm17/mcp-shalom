@@ -92,12 +92,10 @@ export type RespuestaTarifas = z.infer<typeof esquemaRespuestaTarifas>;
  *   const tarifasValidadas = esquemaRespuestaTarifas.parse(respuestaAPI);
  *   // Usar tarifasValidadas con seguridad de tipos
  * } catch (error) {
- *   // Manejar error de validación
  * }
  *
  * // O utilizar el tipo directamente
  * function procesarTarifas(tarifas: RespuestaTarifas) {
- *   // Procesar datos de tarifas
  * }
  * ```
  */

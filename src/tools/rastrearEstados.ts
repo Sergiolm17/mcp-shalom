@@ -67,7 +67,6 @@ export async function rastrearEstados(
       const validatedData = esquemaRespuestaRastreo.parse(
         responseData,
       ) as RespuestaRastreo;
-
       // Determinar el estado actual del envío
       let estadoActual = "En preparación";
       if (validatedData.data.entregado) {
