@@ -3,12 +3,11 @@
 API cliente para los servicios de Shalom courier en Perú, implementando Model Context Protocol (MCP).
 
 [![NPM Version](https://img.shields.io/npm/v/mcp-shalom.svg)](https://www.npmjs.com/package/mcp-shalom)
-[![Node.js Version](https://img.shields.io/node/v/mcp-shalom.svg)](https://nodejs.org/)
-[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Descripción
 
-MCP-Shalom es una biblioteca cliente que proporciona acceso a los servicios web de Shalom Courier en Perú a través del protocolo MCP (Model Context Protocol). Permite realizar operaciones como:
+MCP-Shalom es una biblioteca cliente que proporciona acceso a los servicios web de Shalom Courier en Perú a través del protocolo MCP (Model Context Protocol). Este paquete no es oficial y no está afiliado con Shalom Courier. Permite realizar operaciones como:
 
 - Búsqueda de agencias por ubicación geográfica
 - Consulta de tarifas de envío entre agencias
@@ -163,4 +162,13 @@ Las contribuciones son bienvenidas. Por favor, abre un issue para discutir los c
 
 ## Licencia
 
-ISC - [Sergio Lazaro Mondargo](mailto:sergiolazaromondargo@gmail.com)
+MIT - [Sergio Lazaro Mondargo](mailto:sergiolazaromondargo@gmail.com)
+
+Esta biblioteca está licenciada bajo la Licencia MIT. Esto significa que:
+
+- Puedes usar este código libremente en proyectos personales y comerciales
+- Puedes modificar este código según tus necesidades
+- Puedes distribuir este código o trabajos derivados
+- **DEBES** mantener el aviso de copyright y atribución original en cualquier copia o derivado de este proyecto
+
+### Texto completo de la licencia

@@ -6,7 +6,7 @@
     "shalom-api": "./build/index.js"
   },
   "scripts": {
-    "build": "tsc && chmod 755 build/index.js",
+    "build": "tsc",
     "prepublishOnly": "npm run build"
   },
   "files": [
@@ -21,7 +21,7 @@
     "peru"
   ],
   "author": "Sergio Lazaro Mondargo <sergiolazaromondargo@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "description": "API cliente para los servicios de Shalom courier en Perú, implementando Model Context Protocol",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.11.0",
@@ -35,12 +35,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sergiolazaro/mcp-shalom.git"
+    "url": "https://github.com/Sergiolm17/mcp-shalom.git"
   },
   "bugs": {
-    "url": "https://github.com/sergiolazaro/mcp-shalom/issues"
+    "url": "https://github.com/Sergiolm17/mcp-shalom/issues"
   },
-  "homepage": "https://github.com/sergiolazaro/mcp-shalom#readme",
+  "homepage": "https://github.com/Sergiolm17/mcp-shalom#readme",
   "engines": {
     "node": ">=16.0.0"
   },
