@@ -13,7 +13,7 @@ import { z } from "zod";
 // Crear un servidor MCP
 const server = new McpServer({
   name: "ShalomAPI",
-  version: "1.0.3",
+  version: "1.0.4",
 });
 
 // 1. Lista de Agencias
@@ -122,7 +122,7 @@ server.tool(
   {
     numero: z
       .string()
-      .describe("Número de la guía o orden. Ejemplo: '45751322'"),
+      .describe("Número de la guía o orden. Ejemplo: '45751722'"),
     codigo: z
       .string()
       .describe("Código alfanumérico de la guía. Ejemplo: 'M7P7'"),
@@ -145,7 +145,7 @@ server.tool(
   {
     numero: z
       .string()
-      .describe("Número de la guía o orden. Ejemplo: '45751322'"),
+      .describe("Número de la guía o orden. Ejemplo: '45751722'"),
     codigo: z
       .string()
       .describe("Código alfanumérico de la guía. Ejemplo: 'M7P7'"),
@@ -217,6 +217,31 @@ server.tool(
     };
   },
 );
+
+//funcion que devuelve el link de rastreo
+server.tool(
+    "linkDePago",
+    "Obtengo el link de pago",
+    {
+      numero: z
+          .string()
+          .describe("Número de la guía o orden. Ejemplo: '45751722'"),
+      codigo: z
+          .string()
+          .describe("Código alfanumérico de la guía. Ejemplo: 'M7P7'"),
+    },
+    async ({ numero, codigo }: { numero: string; codigo: string }) => {
+      return {
+        content: [
+          {
+            type: "text",
+            text: `Este es el link para hacer el pago https://pagalo.shalom.pe/pasarela/${numero}/${codigo}/web`
+          }
+        ],
+        isError: false,
+      };
+    })
+
 
 // Iniciar el servidor con transporte stdio
 async function main() {
