@@ -92,13 +92,12 @@ export type RespuestaTarifas = z.infer<typeof esquemaRespuestaTarifas>;
  *   const tarifasValidadas = esquemaRespuestaTarifas.parse(respuestaAPI);
  *   // Usar tarifasValidadas con seguridad de tipos
  * } catch (error) {
- *   console.error("Error de validación:", error);
+ *   // Manejar error de validación
  * }
  *
  * // O utilizar el tipo directamente
  * function procesarTarifas(tarifas: RespuestaTarifas) {
- *   console.log(`Precio: ${tarifas.data.price}`);
- *   console.log(`Tiempo de entrega: ${tarifas.data.lead_time}`);
+ *   // Procesar datos de tarifas
  * }
  * ```
  */

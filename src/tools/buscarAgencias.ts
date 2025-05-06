@@ -93,13 +93,12 @@ export async function buscarAgencias({
       );
     }
 
-    // Registrar en consola para depuración
+    // Preparar información de filtros
     if (departamento || provincia || distrito) {
       let filtroCombinado = [];
       if (departamento) filtroCombinado.push(`Departamento: ${departamento}`);
       if (provincia) filtroCombinado.push(`Provincia: ${provincia}`);
       if (distrito) filtroCombinado.push(`Distrito: ${distrito}`);
-      console.log(`Búsqueda con filtros: ${filtroCombinado.join(", ")}`);
     }
 
     // Devolver el resultado filtrado según los datos solicitados
@@ -160,7 +159,6 @@ export async function buscarAgencias({
       ],
     };
   } catch (error: any) {
-    console.error("Error al buscar agencias:", error);
     return {
       content: [
         { type: "text", text: `Error al buscar agencias: ${error.message}` },

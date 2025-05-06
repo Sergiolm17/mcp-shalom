@@ -51,7 +51,6 @@ export const buscarOrdenPorNumeroCodigo = {
         content: [{ type: "text", text: JSON.stringify(data, null, 2) }],
       };
     } catch (error: any) {
-      console.error("Error al buscar orden:", error);
       return {
         content: [
           { type: "text", text: `Error al buscar orden: ${error.message}` },
@@ -94,7 +93,6 @@ export const buscarEstadoOrden = {
         content: [{ type: "text", text: JSON.stringify(data, null, 2) }],
       };
     } catch (error: any) {
-      console.error("Error al buscar estado de orden:", error);
       return {
         content: [
           {

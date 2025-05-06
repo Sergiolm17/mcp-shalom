@@ -61,7 +61,6 @@ export const calcularTarifaPro = {
         content: [{ type: "text", text: JSON.stringify(data, null, 2) }],
       };
     } catch (error: any) {
-      console.error("Error al calcular tarifa pro:", error);
       return {
         content: [
           {

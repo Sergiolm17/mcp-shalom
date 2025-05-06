@@ -71,9 +71,6 @@ export async function obtenerGuiaRemision(
       const validatedData = esquemaRespuestaGuiaRemision.parse(
         responseData,
       ) as RespuestaGuiaRemision;
-      console.log(
-        "Información de guía de remisión obtenida y validada correctamente",
-      );
 
       // Formatear los datos para la respuesta
       return {
@@ -94,10 +91,6 @@ export async function obtenerGuiaRemision(
         isError: !validatedData.success,
       };
     } catch (validationError) {
-      console.error(
-        "Error al validar datos de guía de remisión:",
-        validationError,
-      );
       // En caso de error de validación, devolvemos la respuesta original
       return {
         content: [
@@ -118,7 +111,6 @@ export async function obtenerGuiaRemision(
       };
     }
   } catch (error: any) {
-    console.error("Error al obtener guía de remisión:", error);
     return {
       content: [
         {

@@ -67,7 +67,6 @@ export async function rastrearEstados(
       const validatedData = esquemaRespuestaRastreo.parse(
         responseData,
       ) as RespuestaRastreo;
-      console.log("Estados del envío obtenidos y validados correctamente");
 
       // Determinar el estado actual del envío
       let estadoActual = "En preparación";
@@ -165,7 +164,6 @@ export async function rastrearEstados(
         isError: !validatedData.success,
       };
     } catch (validationError) {
-      console.error("Error al validar datos de rastreo:", validationError);
       // En caso de error de validación, devolvemos la respuesta original
       return {
         content: [
@@ -186,7 +184,6 @@ export async function rastrearEstados(
       };
     }
   } catch (error: any) {
-    console.error("Error al rastrear estados:", error);
     return {
       content: [
         {

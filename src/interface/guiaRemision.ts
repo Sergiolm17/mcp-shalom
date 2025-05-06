@@ -33,7 +33,7 @@ export type RespuestaGuiaRemision = z.infer<
  *   const datosValidados = esquemaRespuestaGuiaRemision.parse(respuestaAPI);
  *   // Usar datosValidados con seguridad de tipos
  * } catch (error) {
- *   console.error("Error de validación:", error);
+ *   // Manejar error de validación
  * }
  * ```
  */

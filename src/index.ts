@@ -223,10 +223,8 @@ server.tool(
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.log("Servidor MCP de Shalom API iniciado. Escuchando en stdio...");
 }
 
 main().catch((err) => {
-  console.error("Error al iniciar el servidor:", err);
   process.exit(1);
 });

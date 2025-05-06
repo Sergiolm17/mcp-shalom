@@ -68,7 +68,6 @@ export async function obtenerTarifasHandler(
       const validatedData = esquemaRespuestaTarifas.parse(
         responseData,
       ) as RespuestaTarifas;
-      console.log("Tarifas obtenidas y validadas correctamente");
 
       // Devolver los datos formateados
       return {
@@ -94,7 +93,6 @@ export async function obtenerTarifasHandler(
         isError: !validatedData.success,
       };
     } catch (validationError) {
-      console.error("Error al validar datos de tarifas:", validationError);
       // En caso de error de validación, devolvemos la respuesta original
       return {
         content: [
@@ -116,7 +114,6 @@ export async function obtenerTarifasHandler(
       };
     }
   } catch (error: any) {
-    console.error("Error al obtener tarifas:", error);
     return {
       content: [
         { type: "text", text: `Error al obtener tarifas: ${error.message}` },

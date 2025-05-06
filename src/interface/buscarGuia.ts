@@ -79,7 +79,7 @@ export type RespuestaBusqueda = z.infer<typeof esquemaRespuestaBusqueda>;
  *   const datosValidados = esquemaRespuestaBusqueda.parse(respuestaAPI);
  *   // Usar datosValidados con seguridad de tipos
  * } catch (error) {
- *   console.error("Error de validación:", error);
+ *   // Manejar error de validación
  * }
  * ```
  */

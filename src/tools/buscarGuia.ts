@@ -72,7 +72,6 @@ export async function buscarGuiaHandler(
       const validatedData = esquemaRespuestaBusqueda.parse(
         responseData,
       ) as RespuestaBusqueda;
-      console.log("Información de guía obtenida y validada correctamente");
 
       // Formatear los datos para la respuesta
       return {
@@ -119,7 +118,6 @@ export async function buscarGuiaHandler(
         isError: !validatedData.success,
       };
     } catch (validationError) {
-      console.error("Error al validar datos de búsqueda:", validationError);
       // En caso de error de validación, devolvemos la respuesta original
       return {
         content: [
@@ -140,7 +138,6 @@ export async function buscarGuiaHandler(
       };
     }
   } catch (error: any) {
-    console.error("Error al buscar guía:", error);
     return {
       content: [
         {

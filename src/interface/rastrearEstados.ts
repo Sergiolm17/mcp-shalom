@@ -53,7 +53,7 @@ export type RespuestaRastreo = z.infer<typeof esquemaRespuestaRastreo>;
  *   const datosValidados = esquemaRespuestaRastreo.parse(respuestaAPI);
  *   // Usar datosValidados con seguridad de tipos
  * } catch (error) {
- *   console.error("Error de validación:", error);
+ *   // Manejar error de validación
  * }
  * ```
  */

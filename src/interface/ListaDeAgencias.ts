@@ -60,16 +60,11 @@ try {
   const respuestaParseada = esquemaRespuestaApi.parse(tuJson);
 
   // Si llega aquí, el JSON es válido según el esquema
-  console.log("Validación exitosa!");
-  console.log("Primer agencia:", respuestaParseada.datos[0].nombre);
-  console.log("Teléfono de la segunda agencia:", respuestaParseada.datos[1].telefono);
-
   // Ahora puedes usar 'respuestaParseada' con la seguridad de tipos de TypeScript/Zod
   // Por ejemplo, acceder a respuestaParseada.datos[i].idTerminal, etc.
 
 } catch (error) {
   // Si el JSON no cumple con el esquema, Zod lanzará un error
-  console.error("Error de validación:", error);
   // Puedes inspeccionar el error para ver qué campo falló
 }
 */
@@ -84,14 +79,14 @@ export type RespuestaApi = z.infer<typeof esquemaRespuestaApi>;
 /*
 // Ejemplo de cómo usar el tipo inferido:
 function procesarAgencia(agencia: Agencia) {
-  console.log(`Procesando agencia: ${agencia.nombre} (ID: ${agencia.idTerminal})`);
+  // Procesar la agencia
 }
 
 function procesarRespuesta(respuesta: RespuestaApi) {
   if (respuesta.exito) {
     respuesta.datos.forEach(procesarAgencia);
   } else {
-    console.log("La API no tuvo éxito:", respuesta.mensaje);
+    // Manejar caso de error
   }
 }
 
