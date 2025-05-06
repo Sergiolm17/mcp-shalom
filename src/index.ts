@@ -19,7 +19,7 @@ const server = new McpServer({
 
 // 1. Lista de Agencias
 server.tool(
-  "buscarAgenciasPorUbicación",
+  "buscarAgenciasPorUbicacion",
   "Busca agencias filtrando por provincia y/o departamento. Es obligatorio proporcionar al menos uno de los dos criterios de búsqueda (provincia o departamento). te puedo devolver también el TER ID",
   {
     departamento: z
