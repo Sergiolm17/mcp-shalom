@@ -13,7 +13,7 @@ import { z } from "zod";
 // Crear un servidor MCP
 const server = new McpServer({
   name: "ShalomAPI",
-  version: "1.0.4",
+  version: "1.0.5",
 });
 
 // 1. Lista de Agencias
@@ -249,6 +249,6 @@ async function main() {
   await server.connect(transport);
 }
 
-main().catch((err) => {
+main().catch(() => {
   process.exit(1);
 });
