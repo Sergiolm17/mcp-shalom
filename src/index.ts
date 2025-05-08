@@ -13,7 +13,7 @@ import { z } from "zod";
 // Crear un servidor MCP
 const server = new McpServer({
   name: "ShalomAPI",
-  version: "1.0.6",
+  version: "1.0.7",
 });
 
 // 1. Lista de Agencias
@@ -126,9 +126,23 @@ server.tool(
     codigo: z
       .string()
       .describe("Código alfanumérico de la guía. Ejemplo: 'M7P7'"),
+    datosSolicitados: z
+      .array(z.enum(["detalles_guia", "estado_envio", "info_pago", "origen", "destino", "involucrados"]))
+      .optional()
+      .describe(
+        "Especifica qué tipo(s) de dato(s) se requieren de la guía. Valores permitidos: 'detalles_guia', 'estado_envio', 'info_pago', 'origen', 'destino', 'involucrados'. Si no se especifica, se devuelve toda la información.",
+      ),
   },
-  async ({ numero, codigo }: { numero: string; codigo: string }) => {
-    const result = await buscarGuiaHandler(numero, codigo);
+  async ({ 
+    numero, 
+    codigo, 
+    datosSolicitados 
+  }: { 
+    numero: string; 
+    codigo: string; 
+    datosSolicitados?: Array<"detalles_guia" | "estado_envio" | "info_pago" | "origen" | "destino" | "involucrados">; 
+  }) => {
+    const result = await buscarGuiaHandler(numero, codigo, datosSolicitados);
     return {
       content: result.content.map((item) => ({
         ...item,
